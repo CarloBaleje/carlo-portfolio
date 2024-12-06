@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for social icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Animated Gradient Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #6a11cb, #2575fc, #00c6ff, #ff8a00); /* Base colors */
+            background-size: 400% 400%; /* Makes the gradient fill the screen and moves */
+            animation: gradientAnimation 15s ease infinite; /* Animation */
+            color: white;
+        }
+
+        /* Animation for smooth gradient transitions */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Header Content Styling */
+        .header-content h1,
+        .header-content h3,
+        .header-content h5 {
+            color: white !important;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Links */
+        a {
+            color: #f1f1f1; /* Light gray color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffd700; /* Golden yellow color for hover */
+        }
+
+        /* Project Box Hover Effects */
+        .project-box .btn:hover {
+            background-color: #ffd700;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Social Media Icons */
+        .social-icons a {
+            color: white;
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        .social-icons a:hover {
+            color: #ffd700;
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 60px 0;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: rgba(0, 0, 0, 0.7); /* Transparent dark navbar */
+        }
+
+        .navbar-nav .nav-link {
+            color: #f1f1f1; /* Light gray links */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd700; /* Golden yellow hover color */
+        }
+
+        .navbar-brand {
+            color: #ffd700; /* Golden yellow brand color */
+        }
+
+        /* Footer Section */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+
+        footer p {
+            color: white;
+            margin: 0;
+        }
+
+        /* Hover animation for the text content */
+        .text-content.hover-effect h5,
+        .text-content.hover-effect h1,
+        .text-content.hover-effect h3 {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Hover effect and animation for the "Hi, I'm Carlo Baleje" text */
+        .text-content.hover-effect:hover h5,
+        .text-content.hover-effect:hover h1,
+        .text-content.hover-effect:hover h3 {
+            animation: animate__rotateOut 1s ease-out; /* Applying rotateOut animation */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand animate__animated animate__rotateIn" href="homepage.html">Homepage</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="navbar-brand animate__animated animate__zoomInLeft" href="aboutme.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand animate__animated animate__zoomInLeft" href="project.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand animate__animated animate__zoomInLeft" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content d-flex justify-content-between align-items-center">
+                <div class="left-side d-flex flex-column align-items-start" style="margin-left: 150px; margin-top: 100px;">
+                    <div class="navbar-brand animate__animated animate__rotateInDownLeft" class="text-content hover-effect">
+                        <h5>Hi, I'm Carlo Baleje</h5>
+                        <h1>Graphic Designer <br> and Web Developer</h1>
+                        <h3>Based in the Philippines</h3>
+                    </div>
+                    <div class="image-container L" style="margin-left: -150px;">
+                        <img src="img/laptop.png" alt="Laptop" class="img-fluid rounded-circle">
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="img/mypics.jpg" alt="My Photo" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Carlo J. Baleje. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

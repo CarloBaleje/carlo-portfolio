@@ -1,0 +1,156 @@
+/* Card Styling */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 300px; /* Set a height for the card */
+}
+
+.card-img-top {
+    border-radius: 10px;
+    max-width: 100%; /* Ensure the image takes up maximum width while maintaining aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+/* Default styling for text content */
+.text-content h5,
+.text-content h1,
+.text-content h3 {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    color: rgb(255, 255, 255);
+}
+
+/* Hover effect */
+.text-content:hover h5 {
+    transform: translateX(10px); /* Moves slightly to the right */
+    color: black; /* Change text color on hover */
+}
+
+.text-content:hover h1 {
+    transform: scale(1.05); /* Slightly enlarges the text */
+    color: black;
+}
+
+.text-content:hover h3 {
+    transform: translateY(5px); /* Moves slightly down */
+    color: #00ff00;
+}
+
+/* General Body Styling */
+body {
+    background-color: transparent; /* Make background transparent to see matrix background */
+    color: white;
+    overflow: auto;
+}
+/* Matrix Background Animation */
+.matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Full viewport width */
+    height: 100vh;  /* Full viewport height */
+    background-color: black;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.matrix-background canvas {
+    display: block;
+}
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    background-color: skyblue(242, 248, 242) !important;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: black !important;
+}
+
+/* Header Section Styling */
+
+header {
+    padding-top: 100px; /* To give space for the fixed navbar */
+}
+
+.header-content {
+    color: white;
+}
+
+/* Section Titles */
+.section-title {
+    color: green;
+}
+
+/* About, Projects, and Contact Section */
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Project Box Styling */
+.project-box {
+    background-color: #222;
+    color: white;
+}
+
+.project-box:hover {
+    background-color: black;
+}
+
+.project-title {
+    color: green;
+}
+
+.project-description {
+    color: #bbb;
+}
+
+.btn-success {
+    background-color: green;
+    border-color: green;
+}
+
+.btn-success:hover {
+    background-color: #555;
+    border-color: skyblue;
+}
+
+/* Footer Section Styling */
+footer {
+    background-color: skyblue;
+    color: white;
+    padding: 20px 0;
+}
+
+.social-icons i {
+    color: white;
+    margin: 0 10px;
+}
+
+.social-icons i:hover {
+    color: green;
+}
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
