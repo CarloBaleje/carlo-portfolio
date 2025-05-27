@@ -8,284 +8,64 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome for social icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <style>
-        /* Animated Gradient Background */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(45deg, #6a11cb, #2575fc, #00c6ff, #ff8a00); /* Base colors */
-            background-size: 400% 400%; /* Makes the gradient fill the screen and moves */
-            animation: gradientAnimation 15s ease infinite; /* Animation */
-            color: white;
-        }
-
-        /* Animation for smooth gradient transitions */
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Header Content Styling */
-        .header-content h1,
-        .header-content h3,
-        .header-content h5 {
-            color: white !important;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Section Titles */
-        .section-title {
-            color: white;
-            text-align: center;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            margin-bottom: 40px;
-        }
-
-        /* Links */
-        a {
-            color: #f1f1f1; /* Light gray color */
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #ffd700; /* Golden yellow color for hover */
-        }
-
-        /* Project Box Hover Effects */
-        .project-box .btn:hover {
-            background-color: #ffd700;
-            transition: background-color 0.3s ease;
-        }
-
-        /* Social Media Icons */
-        .social-icons a {
-            color: white;
-            margin-right: 10px;
-            font-size: 1.5em;
-        }
-
-        .social-icons a:hover {
-            color: #ffd700;
-        }
-
-        /* General Section Styling */
-        section {
-            padding: 60px 0;
-        }
-
-        /* Navbar Styling */
-        .navbar {
-            background: rgba(0, 0, 0, 0.7); /* Transparent dark navbar */
-        }
-
-        .navbar-nav .nav-link {
-            color: #f1f1f1; /* Light gray links */
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #ffd700; /* Golden yellow hover color */
-        }
-
-        .navbar-brand {
-            color: #ffd700; /* Golden yellow brand color */
-        }
-
-        /* Footer Section */
-        footer {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-        }
-
-        footer p {
-            color: white;
-            margin: 0;
-        }
-
-        /* Hover animation for the text content */
-        .text-content.hover-effect h5,
-        .text-content.hover-effect h1,
-        .text-content.hover-effect h3 {
-            opacity: 1;
-            transition: opacity 0.5s ease;
-        }
-
-        /* Hover effect and animation for the "Hi, I'm Carlo Baleje" text */
-        .text-content.hover-effect:hover h5,
-        .text-content.hover-effect:hover h1,
-        .text-content.hover-effect:hover h3 {
-            animation: animate__rotateOut 1s ease-out; /* Applying rotateOut animation */
-        }
-
-        /* Skills Section */
-        .skills-section {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 60px 0;
-            margin-top: 50px;
-            border-radius: 10px;
-        }
-
-        .skills-section .skill-box {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            margin: 15px 0;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .skills-section .skill-box i {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .skills-section .skill-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .skills-section .skill-description {
-            font-size: 1rem;
-            color: #ddd;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand animate__animated animate__rotateIn" href="homepage.html">Homepage</a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="navbar-brand animate__animated animate__zoomInLeft" href="aboutme.html">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand animate__animated animate__zoomInLeft" href="project.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand animate__animated animate__zoomInLeft" href="contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__zoomInLeft" href="aboutme.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__zoomInLeft" href="project.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__zoomInLeft" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header>
+    <header class="text-center py-5">
         <div class="container">
-            <div class="header-content d-flex justify-content-between align-items-center">
-                <div class="left-side d-flex flex-column align-items-start" style="margin-left: -1px; margin-top: 100px;">
-                    <div class="navbar-brand animate__animated animate__rotateInDownLeft" class="text-content hover-effect">
-                        <h5>Hi, I'm Carlo Baleje</h5>
-                        <h1>Graphic Designer <br> and Web Developer</h1>
-                        <h3>Based in the Philippines</h3>
-                    </div>
-                    <div class="image-container L" style="margin-left: -50px;">
-                        <img src="img/laptop.png" alt="Laptop" class="img-fluid rounded-circle">
-                    </div>
-                </div>
-
-                <div class="image-container">
-                    <img src="img/mypics.jpg" alt="My Photo" class="img-fluid rounded-circle">
-                </div>
-            </div>
+            <h5>Hi, I'm Carlo Baleje</h5>
+            <h1>Graphic Designer & Web Developer</h1>
+            <h3>Based in the Philippines</h3>
+            <img src="img/mypics.jpg" alt="My Photo" class="img-fluid rounded-circle mt-3" style="width: 400px;">
         </div>
     </header>
 
-    <!-- Skills Section -->
     <section class="skills-section">
         <div class="container">
             <h2 class="section-title animate__animated animate__fadeIn">Skills</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <i class="fas fa-code"></i>
-                        <h3 class="skill-title">HTML</h3>
-                        <p class="skill-description">Markup language used to create the structure of web pages.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3 class="skill-title">CSS</h3>
-                        <p class="skill-description">Style sheet language for designing the look and feel of web pages.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3 class="skill-title">JavaScript</h3>
-                        <p class="skill-description">Programming language to add interactivity to web pages.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <i class="fas fa-database"></i>
-                        <h3 class="skill-title">PHP</h3>
-                        <p class="skill-description">Server-side scripting language used for dynamic web development.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <i class="fas fa-database"></i>
-                        <h3 class="skill-title">MySQL</h3>
-                        <p class="skill-description">Relational database management system used with web development.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <i class="fas fa-image"></i>
-                        <h3 class="skill-title">Photo Editing</h3>
-                        <p class="skill-description">Experience in editing and manipulating photos for creative projects.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <i class="fas fa-video"></i>
-                        <h3 class="skill-title">Video Editing</h3>
-                        <p class="skill-description">Skills in video editing for creating engaging content and media.</p>
-                    </div>
-                </div>
+                <div class="col-md-4"><div class="skill-box"><i class="fas fa-code"></i><h3>HTML</h3><p>Web structure development.</p></div></div>
+                <div class="col-md-4"><div class="skill-box"><i class="fas fa-paint-brush"></i><h3>CSS</h3><p>Web styling and layout.</p></div></div>
+                <div class="col-md-4"><div class="skill-box"><i class="fas fa-laptop-code"></i><h3>JavaScript</h3><p>Interactive web applications.</p></div></div>
+                <div class="col-md-4"><div class="skill-box"><i class="fas fa-database"></i><h3>MySQL</h3><p>Backend development & database management.</p></div></div>
+                <div class="col-md-4"><div class="skill-box"><i class="fas fa-image"></i><h3>Photo Editing</h3><p>Professional image enhancement.</p></div></div>
+                <div class="col-md-4"><div class="skill-box"><i class="fas fa-video"></i><h3>Video Editing</h3><p>Creative video production.</p></div></div>
+                <div class="col-md-4"><div class="skill-box"><i class="fas fa-project-diagram"></i><h3>Sencha Ext Js</h3><p>Modern JavaScript framework.</p></div></div>
+                <div class="col-md-4"><div class="skill-box"><i class="fas fa-pencil-ruler"></i><h3>Figma</h3><p>Collaborative interface design and prototyping tool</p></div></div>
+                <div class="col-md-4"><div class="skill-box"><i class="fas fa-palette"></i><h3>Canva</h3><p>Collaborative interface design and prototyping tool</p></div></div>
+
+
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container text-center">
+    <footer class="text-center py-3">
+        <div class="container">
             <p>&copy; 2024 Carlo J. Baleje. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
