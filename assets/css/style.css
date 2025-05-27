@@ -1,61 +1,208 @@
+/* ======================================
+   GENERAL STYLING
+====================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc, #00c6ff, #ff8a00);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: white;
+    overflow: auto;
+    background-color: transparent; /* fallback */
+}
 
+@keyframes gradientAnimation {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
 
-/* Card Styling */
+/* ======================================
+   NAVBAR
+====================================== */
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar-brand, 
+.navbar-nav .nav-link {
+    color: #f1f1f1 !important;
+}
+
+.navbar-brand:hover, 
+.navbar-nav .nav-link:hover {
+    color: #ffd700 !important;
+}
+
+/* ======================================
+   HEADER SECTION
+====================================== */
+header {
+    padding-top: 100px; /* space for fixed navbar */
+}
+
+.header-content {
+    color: white;
+}
+
+/* ======================================
+   SECTION TITLES
+====================================== */
+.section-title {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px;
+}
+
+/* ======================================
+   SKILLS SECTION
+====================================== */
+.skills-section {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* fixed your invalid blue() */
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-section .section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.skills-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.skills-section .skill-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px 20px;
+    flex: 1 1 calc(33.333% - 30px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 260px;
+    cursor: default;
+    color: #fff;
+}
+
+.skills-section .skill-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.skills-section .skill-box i {
+    font-size: 3rem;
+    color: #00aaff;
+    margin-bottom: 20px;
+}
+
+.skills-section .skill-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.skills-section .skill-box p {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+    .skills-section .skill-box {
+        flex: 1 1 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 575px) {
+    .skills-section {
+        padding: 40px 10px;
+    }
+    .skills-section .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .skills-section .skill-box {
+        flex: 1 1 100%;
+        padding: 25px 15px;
+    }
+    .skills-section .skill-box i {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    .skills-section .skill-box h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    .skills-section .skill-box p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ======================================
+   CARD STYLING
+====================================== */
 .card {
     background: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 10px;
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    height: 300px; /* Set a height for the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
 }
 
 .card-img-top {
     border-radius: 10px;
-    max-width: 100%; /* Ensure the image takes up maximum width while maintaining aspect ratio */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
-
-
-/* Default styling for text content */
+/* ======================================
+   TEXT CONTENT HOVER EFFECTS
+====================================== */
 .text-content h5,
 .text-content h1,
 .text-content h3 {
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-    color: rgb(255, 255, 255);
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: white;
 }
 
-/* Hover effect */
 .text-content:hover h5 {
-    transform: translateX(10px); /* Moves slightly to the right */
-    color: black; /* Change text color on hover */
+    transform: translateX(10px);
+    color: black;
 }
 
 .text-content:hover h1 {
-    transform: scale(1.05); /* Slightly enlarges the text */
+    transform: scale(1.05);
     color: black;
 }
 
 .text-content:hover h3 {
-    transform: translateY(5px); /* Moves slightly down */
+    transform: translateY(5px);
     color: #00ff00;
 }
 
-/* General Body Styling */
-body {
-    background-color: transparent; /* Make background transparent to see matrix background */
-    color: white;
-    overflow: auto;
-}
-/* Matrix Background Animation */
+/* ======================================
+   MATRIX BACKGROUND ANIMATION
+====================================== */
 .matrix-background {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;  /* Full viewport width */
-    height: 100vh;  /* Full viewport height */
+    width: 100vw;
+    height: 100vh;
     background-color: black;
     z-index: -1;
     pointer-events: none;
@@ -65,47 +212,13 @@ body {
     display: block;
 }
 
-
-
-
-/* Navbar Styling */
-.navbar {
-    background-color: skyblue(242, 248, 242) !important;
-}
-
-.navbar-brand, .navbar-nav .nav-link {
-    color: white !important;
-}
-
-.navbar-nav .nav-link:hover {
-    color: black !important;
-}
-
-/* Header Section Styling */
-
-header {
-    padding-top: 100px; /* To give space for the fixed navbar */
-}
-
-.header-content {
-    color: white;
-}
-
-/* Section Titles */
-.section-title {
-    color: green;
-}
-
-/* About, Projects, and Contact Section */
-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-/* Project Box Styling */
+/* ======================================
+   PROJECT BOX STYLING
+====================================== */
 .project-box {
     background-color: #222;
     color: white;
+    transition: background-color 0.3s ease;
 }
 
 .project-box:hover {
@@ -113,7 +226,7 @@ section {
 }
 
 .project-title {
-    color: green;
+    color: #00ff00; /* changed from green to brighter green */
 }
 
 .project-description {
@@ -123,6 +236,7 @@ section {
 .btn-success {
     background-color: green;
     border-color: green;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-success:hover {
@@ -130,22 +244,29 @@ section {
     border-color: skyblue;
 }
 
-/* Footer Section Styling */
+/* ======================================
+   FOOTER STYLING
+====================================== */
 footer {
     background-color: skyblue;
     color: white;
     padding: 20px 0;
+    text-align: center;
 }
 
 .social-icons i {
     color: white;
     margin: 0 10px;
+    transition: color 0.3s ease;
 }
 
 .social-icons i:hover {
     color: green;
 }
-/* Fade-in animation */
+
+/* ======================================
+   FADE-IN ANIMATION
+====================================== */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
